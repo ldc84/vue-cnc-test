@@ -25,7 +25,8 @@ io.on('connection', function(socket){
       from: {
         name: data.name,
       },
-      msg: data.msg
+      msg: data.msg,
+      date: data.date
     };
 
     // 메시지를 전송한 클라이언트를 제외한 모든 클라이언트에게 메시지를 전송한다
@@ -33,7 +34,7 @@ io.on('connection', function(socket){
   });
 
   socket.on('disconnect', function() {
-    console.log('user disconnected: ' + socket.name);
+    console.log('user disconnected: ' + socket.name, socket.date);
   });
 
 

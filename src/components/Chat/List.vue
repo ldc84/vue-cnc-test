@@ -7,6 +7,7 @@
           <p class="msg">
             <span>{{msg.msg}}</span>
           </p>
+          <p class="time">{{msg.date}}</p>
         </div>
       </div>
     </transition-group>
@@ -39,6 +40,11 @@ export default {
         background-color:rgba(255,255,255,0.2);
         border-radius:10px;
       }
+    }
+    .time {
+      font-size:11px;
+      font-weight:300;
+      opacity:0.3;
     }
     .me {
       flex-flow: row-reverse;

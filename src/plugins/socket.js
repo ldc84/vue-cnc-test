@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import io from 'socket.io-client';
 
-const ip = 'http://localhost:3000' || 'http://10.250.55.157:3000';
+const ip = 'http://10.250.55.157:3000';
 const socket = io(ip);
 
 
@@ -14,6 +14,7 @@ const SocketPlugin = {
       socket.emit('chat', {
         msg: $payload.msg,
         name: $payload.name,
+        date: $payload.date
       });
     };
 

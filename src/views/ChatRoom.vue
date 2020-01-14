@@ -38,16 +38,18 @@ export default {
     ...mapMutations({
       'pushMsgData': Constant.PUSH_MSG_DATA,
     }),
-    sendMessage(msg) {
+    sendMessage(msg, date) {
       this.pushMsgData({
         from: {
           name: '나',
         },
         msg,
+        date
       });
       this.$sendMessage({
         name: this.$route.params.user,
         msg,
+        date
       });
     },
   },
